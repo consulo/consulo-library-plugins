@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  - Copyright 2013-2018 consulo.io
+  - Copyright 2013-2017 consulo.io
   -
   - Licensed under the Apache License, Version 2.0 (the "License");
   - you may not use this file except in compliance with the License.
@@ -17,13 +17,21 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>consulo</groupId>
 		<artifactId>arch.managment</artifactId>
 		<version>2-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
+
+	<groupId>consulo.plugin.library</groupId>
+	<artifactId>consulo.library.flexmark</artifactId>
+	<version>2-SNAPSHOT</version>
+	<packaging>consulo-plugin</packaging>
+
+	<properties>
+		<flexmark.version>0.28.24</flexmark.version>
+	</properties>
 
 	<repositories>
 		<repository>
@@ -36,13 +44,42 @@
 		</repository>
 	</repositories>
 
-	<groupId>consulo.plugin.library</groupId>
-	<artifactId>consulo.library.parent</artifactId>
-	<version>2-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>consulo.maven</groupId>
+				<artifactId>consulo-maven-plugin</artifactId>
+				<version>2-SNAPSHOT</version>
+				<extensions>true</extensions>
+				<configuration>
+					<repositoryChannel>nightly</repositoryChannel>
+					<packaging>
+						<skip>${dev.mode}</skip>
+						<version>${build.number}</version>
+					</packaging>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>workspace</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
-	<modules>
-		<module>batik</module>
-		<module>flexmark</module>
-	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+	</dependencies>
 </project>
