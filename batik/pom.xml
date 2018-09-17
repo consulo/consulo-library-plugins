@@ -72,6 +72,13 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>consulo</groupId>
+			<artifactId>consulo-core-api</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-dom</artifactId>
 			<version>${batik.version}</version>
