@@ -3,4 +3,7 @@
 	<name>Batik Library</name>
 	<version>SNAPSHOT</version>
 	<category>Library</category>
+	<tags>
+		<tag>library</tag>
+	</tags>
 </consulo-plugin>
