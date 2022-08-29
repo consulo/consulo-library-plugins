@@ -6,4 +6,6 @@
 	<tags>
 		<tag>library</tag>
 	</tags>
+
+	<depends>consulo.desktop.awt</depends>
 </consulo-plugin>
