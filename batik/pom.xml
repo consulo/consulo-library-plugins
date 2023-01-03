@@ -19,18 +19,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>consulo</groupId>
-		<artifactId>arch.managment</artifactId>
-		<version>2-SNAPSHOT</version>
+		<artifactId>arch.ide-api-provided</artifactId>
+		<version>3-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
 
 	<groupId>consulo.plugin.library</groupId>
 	<artifactId>consulo.library.batik</artifactId>
-	<version>2-SNAPSHOT</version>
+	<version>3-SNAPSHOT</version>
 	<packaging>consulo-plugin</packaging>
 
 	<properties>
-		<batik.version>1.13</batik.version>
+		<batik.version>1.14.0-SNAPSHOT</batik.version>
 	</properties>
 
 	<repositories>
@@ -49,10 +49,9 @@
 			<plugin>
 				<groupId>consulo.maven</groupId>
 				<artifactId>maven-consulo-plugin</artifactId>
-				<version>2-SNAPSHOT</version>
 				<extensions>true</extensions>
 				<configuration>
-					<repositoryChannel>nightly</repositoryChannel>
+					<repositoryChannel>valhalla</repositoryChannel>
 					<packaging>
 						<skip>${dev.mode}</skip>
 						<version>${build.number}</version>
@@ -71,13 +70,6 @@
 	</build>
 
 	<dependencies>
-		<dependency>
-			<groupId>consulo</groupId>
-			<artifactId>consulo-core-api</artifactId>
-			<version>${project.version}</version>
-			<scope>provided</scope>
-		</dependency>
-
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-dom</artifactId>
@@ -165,6 +157,18 @@
 		<dependency>
 			<groupId>org.apache.xmlgraphics</groupId>
 			<artifactId>batik-ext</artifactId>
+			<version>${batik.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-svggen</artifactId>
+			<version>${batik.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-shared-resources</artifactId>
 			<version>${batik.version}</version>
 		</dependency>
 
