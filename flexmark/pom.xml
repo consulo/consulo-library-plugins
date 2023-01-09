@@ -80,5 +80,60 @@
 			<artifactId>flexmark-util</artifactId>
 			<version>${flexmark.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-ast</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-builder</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-collection</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-data</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-dependency</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-format</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-html</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-misc</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-options</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-sequence</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vladsch.flexmark</groupId>
+			<artifactId>flexmark-util-visitor</artifactId>
+			<version>${flexmark.version}</version>
+		</dependency>
 	</dependencies>
 </project>
