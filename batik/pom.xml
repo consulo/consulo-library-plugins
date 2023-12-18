@@ -30,7 +30,7 @@
 	<packaging>consulo-plugin</packaging>
 
 	<properties>
-		<batik.version>1.14.0-SNAPSHOT</batik.version>
+		<batik.version>1.17</batik.version>
 	</properties>
 
 	<repositories>
