@@ -1,9 +1,9 @@
 <consulo-plugin url="https://github.com/consulo/consulo-library-plugins">
-	<id>consulo.library.flexmark</id>
-	<name>FlexMark Library</name>
-	<version>SNAPSHOT</version>
-	<category>Library</category>
-	<tags>
-		<tag>library</tag>
-	</tags>
+    <id>consulo.library.flexmark</id>
+    <name>FlexMark Library</name>
+    <version>SNAPSHOT</version>
+    <category>Library</category>
+    <tags>
+        <tag>library</tag>
+    </tags>
 </consulo-plugin>

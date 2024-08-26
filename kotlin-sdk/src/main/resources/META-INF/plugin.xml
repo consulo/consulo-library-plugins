@@ -1,11 +1,9 @@
 <consulo-plugin url="https://github.com/consulo/consulo-library-plugins">
-    <id>consulo.library.batik</id>
-    <name>Batik Library</name>
+    <id>consulo.library.kotlin.sdk</id>
+    <name>Kotlin SDK Library</name>
     <version>SNAPSHOT</version>
     <category>Library</category>
     <tags>
         <tag>library</tag>
     </tags>
-
-    <depends>consulo.desktop.awt</depends>
 </consulo-plugin>
