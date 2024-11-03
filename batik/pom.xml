@@ -82,8 +82,8 @@
         </dependency>
 
         <dependency>
-            <groupId>org.w3c.css</groupId>
-            <artifactId>sac</artifactId>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis-ext</artifactId>
             <scope>provided</scope>
         </dependency>
 
