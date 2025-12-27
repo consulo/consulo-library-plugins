@@ -45,5 +45,6 @@
         <module>batik</module>
         <module>flexmark</module>
         <module>kotlin-sdk</module>
+        <module>twelvemonkeys-imageio</module>
     </modules>
 </project>
