@@ -46,6 +46,5 @@
         <module>flexmark</module>
         <module>kotlin-sdk</module>
         <module>twelvemonkeys-imageio</module>
-        <module>javazoom-jlayer</module>
     </modules>
 </project>
