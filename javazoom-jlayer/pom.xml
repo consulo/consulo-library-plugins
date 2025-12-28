@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  - Copyright 2013-2018 consulo.io
+  - Copyright 2013-2025 consulo.io
   -
   - Licensed under the Apache License, Version 2.0 (the "License");
   - you may not use this file except in compliance with the License.
@@ -17,13 +17,17 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>consulo</groupId>
-        <artifactId>arch.managment</artifactId>
+        <artifactId>arch.ide-api-provided</artifactId>
         <version>3-SNAPSHOT</version>
         <relativePath/>
     </parent>
+
+    <groupId>consulo.plugin.library</groupId>
+    <artifactId>consulo.library.javazoom-jlayer</artifactId>
+    <version>3-SNAPSHOT</version>
+    <packaging>consulo-plugin</packaging>
 
     <repositories>
         <repository>
@@ -36,16 +40,35 @@
         </repository>
     </repositories>
 
-    <groupId>consulo.plugin.library</groupId>
-    <artifactId>consulo.library.parent</artifactId>
-    <version>3-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>consulo.maven</groupId>
+                <artifactId>maven-consulo-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <packaging>
+                        <skip>${dev.mode}</skip>
+                        <version>${build.number}</version>
+                    </packaging>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>workspace</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
-    <modules>
-        <module>batik</module>
-        <module>flexmark</module>
-        <module>kotlin-sdk</module>
-        <module>twelvemonkeys-imageio</module>
-        <module>javazoom-jlayer</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>consulo.internal.sound</groupId>
+            <artifactId>javazoom.jlayer</artifactId>
+            <version>3.0</version>
+        </dependency>
+    </dependencies>
 </project>
