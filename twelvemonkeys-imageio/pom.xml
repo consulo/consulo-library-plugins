@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  - Copyright 2013-2017 consulo.io
+  - Copyright 2013-2025 consulo.io
   -
   - Licensed under the Apache License, Version 2.0 (the "License");
   - you may not use this file except in compliance with the License.
@@ -19,18 +19,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>consulo</groupId>
-        <artifactId>arch.bind.java</artifactId>
+        <artifactId>arch.ide-api-provided</artifactId>
         <version>3-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
     <groupId>consulo.plugin.library</groupId>
-    <artifactId>consulo.library.kotlin-sdk</artifactId>
+    <artifactId>consulo.library.twelvemonkeys-imageio</artifactId>
     <version>3-SNAPSHOT</version>
     <packaging>consulo-plugin</packaging>
 
     <properties>
-        <kotlin.version>1.9.23</kotlin.version>
+        <twelvemonkeys.imageio.version>3.13.0</twelvemonkeys.imageio.version>
     </properties>
 
     <repositories>
@@ -70,26 +70,29 @@
 
     <dependencies>
         <dependency>
-            <groupId>consulo</groupId>
-            <artifactId>consulo-application-api</artifactId>
-            <version>${project.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-            <version>${kotlin.version}</version>
+            <groupId>com.twelvemonkeys.common</groupId>
+            <artifactId>common-io</artifactId>
+            <version>${twelvemonkeys.imageio.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-annotations-jvm</artifactId>
-            <version>${kotlin.version}</version>
+            <groupId>com.twelvemonkeys.common</groupId>
+            <artifactId>common-lang</artifactId>
+            <version>${twelvemonkeys.imageio.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-reflect</artifactId>
-            <version>${kotlin.version}</version>
+            <groupId>com.twelvemonkeys.common</groupId>
+            <artifactId>common-image</artifactId>
+            <version>${twelvemonkeys.imageio.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twelvemonkeys.imageio</groupId>
+            <artifactId>imageio-core</artifactId>
+            <version>${twelvemonkeys.imageio.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.twelvemonkeys.imageio</groupId>
+            <artifactId>imageio-metadata</artifactId>
+            <version>${twelvemonkeys.imageio.version}</version>
         </dependency>
     </dependencies>
 </project>

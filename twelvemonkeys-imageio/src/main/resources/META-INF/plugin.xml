@@ -1,0 +1,9 @@
+<consulo-plugin url="https://github.com/consulo/consulo-library-plugins">
+    <id>consulo.library.twelvemonkeys.imageio</id>
+    <name>Twelve Monkeys Image Library</name>
+    <version>SNAPSHOT</version>
+    <category>Library</category>
+    <tags>
+        <tag>library</tag>
+    </tags>
+</consulo-plugin>
